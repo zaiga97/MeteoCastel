@@ -3,6 +3,7 @@
 #include "Zbme280.h"
 #include "Zb20.h"
 #include "Zbh1750.h"
+#include "Zuv.h"
 #include "Zrecord.h"
 #include "Zntp.h"
 #include "Zrain.h"
@@ -14,6 +15,7 @@ class Zsensors{
   Zbh1750 zbh1750{};
   Zntp zntp{};
   Zrain zrain{};
+  Zuv zuv{UV_PIN};
 
   Record lastDataRecord;
 
@@ -27,7 +29,8 @@ class Zsensors{
       zbme280.getPressure(),
       zbh1750.getLux(),
       zb20.getTemperature(),
-      zrain.getRain()
+      zrain.getRain(),
+      zuv.getUvIndex()
     };
   }
 

@@ -12,18 +12,20 @@ class Record{
   float lightIntensity;
   float groundTemperature;
   float rain;
+  int uvIndex;
 
 
   Record() = default;
 
-  Record(const String timeStamp, const float airTemperature, const float humidity, const float pressure, const float lightIntensity, const float groundTemperature, const float rain):
+  Record(const String timeStamp, const float airTemperature, const float humidity, const float pressure, const float lightIntensity, const float groundTemperature, const float rain, const int uvIndex):
     timeStamp{timeStamp},
     airTemperature{airTemperature},
     humidity{humidity},
     pressure{pressure},
     lightIntensity{lightIntensity},
     groundTemperature{groundTemperature},
-    rain{rain}{
+    rain{rain},
+    uvIndex{uvIndex}{
   }
 
 
@@ -34,7 +36,8 @@ class Record{
           pressure + ", " +
           lightIntensity + ", " +
           groundTemperature + ", " +
-          rain + "]"; 
+          rain + ", " +
+          uvIndex + "]"; 
   }
 };
 

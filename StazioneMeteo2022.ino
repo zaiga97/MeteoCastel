@@ -1,7 +1,12 @@
 //########## Libraries ###################
-#define DHT_PIN D2
+#define DHT_PIN D0
+#define LED D3
+#define ONE_WIRE_BUS D4
+#define PM_25 D6
+#define PM_10 D5
+#define WIND_PIN D7
 #define RAIN_PIN D8
-#define ONE_WIRE_BUS D7
+#define UV_PIN A0
 const String googleAppUrl = "/macros/s/AKfycbyRfgFy4IWD6Qa7XESh9FctGKGs9Qa6Z412XNe3TnqF3HqWSGvMim02uY1pIwEXSZ4/exec";
 
 //########## OtherFiles ##################
@@ -68,7 +73,7 @@ void loop() {
     } 
     //Wifi sleep N.B: this is almost 10s lost
     Serial.println("Going to sleep");
-    zwifi.sleep(60000);
+    zwifi.sleep(10000);
     Serial.println("Waking up");
   //sleep/keep
 }
