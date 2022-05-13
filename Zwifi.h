@@ -6,7 +6,7 @@
 class Zwifi{
   public:
 
-  const char* ssid = "NETGEAR59";
+  const char* ssid = "NETGEAR60";
   const char* password = "exoticcartoon025";
 
   unsigned long startConnectionTime;
