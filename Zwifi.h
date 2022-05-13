@@ -26,8 +26,8 @@ class Zwifi{
 
   void sleep(int sleepTime){
     WiFi.disconnect();
-    WiFi.forceSleepBegin();
+    //WiFi.forceSleepBegin();
     delay(sleepTime + 1);
-    WiFi.forceSleepWake();
+    //WiFi.forceSleepWake();
   }
 };
